@@ -1,0 +1,10 @@
+body {
+    font-family: Oswald;
+    color: #F3B17E;
+    background-color: black;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
