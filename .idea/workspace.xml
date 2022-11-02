@@ -15,6 +15,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,11 +37,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/thomas.grossmann/PhpstormProjects/Solution-GUI1",
+    "last_opened_file_path": "C:/Users/thomas.grossmann/Documents/Github/GUI1-ScoreLive",
     "list.type.of.created.stylesheet": "CSS",
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thomas.grossmann\Documents\Github\GUI1-ScoreLive" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
       <method v="2" />
@@ -55,6 +62,10 @@
       <option name="presentableId" value="Default" />
       <updated>1665559412249</updated>
       <workItem from="1665559413448" duration="3436000" />
+      <workItem from="1665654667455" duration="2000" />
+      <workItem from="1667219831924" duration="4047000" />
+      <workItem from="1667382626080" duration="10000" />
+      <workItem from="1667392710392" duration="6133000" />
     </task>
     <servers />
   </component>
