@@ -3,7 +3,7 @@ body {
 }
 
 #ham {
-    left: 12.5%;
+    top: -20%;
 }
 
 #ham > ul > li:last-child {
