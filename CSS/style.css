@@ -3,17 +3,18 @@ body {
 }
 
 #ham {
-    top: -20%;
+    top: 11%;
 }
 
 #ham > ul > li:last-child {
     border-bottom: none;
 }
 
-.custom-scroll::-webkit-scrollbar {
+/* Hide the Scrollbar on all navigators */
+.custom-scrollbar::-webkit-scrollbar {
     display: none;
 }
-.custom-scroll {
+.custom-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
