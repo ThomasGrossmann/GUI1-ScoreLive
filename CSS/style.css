@@ -3,7 +3,8 @@ body {
 }
 
 #ham {
-    top: 11%;
+    top: 100px;
+    width: 86.6666666%;
 }
 
 #ham > ul > li:last-child {
