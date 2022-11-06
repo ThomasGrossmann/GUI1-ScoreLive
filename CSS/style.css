@@ -12,8 +12,12 @@ body {
     border-bottom: none;
 }
 
-.historic {
+#historic {
     height: 560px;
+}
+
+#historic > ul > li:last-child {
+    margin-bottom: 0;
 }
 
 /* Hide the Scrollbar on all navigators */
