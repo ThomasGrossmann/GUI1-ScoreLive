@@ -3,53 +3,263 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>ScoreLive</title>
     <script src="JS/js.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         referrerpolicy="no-referrer" rel="stylesheet" />
 </head>
 
-<body class="text-center text-7xl bg-black" style="font-family: Oswald;">
-    <header>
-        <div class="hidden absolute left-[12.5%] bg-[#F3B17E] w-3/4 md:flex md:items-center md:w-auto text-3xl text-left z-40"
+<body class="text-center text-7xl bg-black custom-scrollbar" style="font-family: Oswald;">
+    <div class="sticky top-0 z-50 bg-black">
+        <div class="absolute bg-[#F3B17E] text-3xl text-left z-40 left-2/4 -translate-x-2/4 transition-all duration-300 ease-in -top-96"
             id="ham">
-            <ul class="text-[#F3B17E] md:flex md:justify-between md:pt-0 border-2 border-[#F3B17E]">
+            <ul class="text-[#F3B17E] border-2 border-[#F3B17E]">
                 <li class="border-b-2 border-b-[#F3B17E]">
-                    <a class="md:p-4 py-2 block hover:text-[#F3B17E] hover:bg-black text-black" href="./index.html">
+                    <a class="py-2 block text-black hover:text-[#F3B17E] hover:bg-black" href="./index.html">
                         <i class="fa-solid fa-house px-5"></i>HOME</a>
                 </li>
                 <li class="border-b-2 border-b-[#F3B17E]">
-                    <a class="md:p-4 py-2 block hover:text-[#F3B17E] hover:bg-black text-black" href="./game.html"><i
+                    <a class="py-2 block text-black hover:text-[#F3B17E] hover:bg-black" href="./game.html"><i
                             class="fa-solid fa-fire px-5"></i>CURRENT GAME</a>
                 </li>
                 <li class="border-b-2 border-b-[#F3B17E]">
-                    <a class="md:p-4 py-2 block hover:text-[#F3B17E] hover:bg-black text-black" href="./referee.html"><i
+                    <a class="py-2 block text-black hover:text-[#F3B17E] hover:bg-black" href="./referee.html"><i
                             class="fa-solid fa-user px-5"></i>REFEREE</a>
                 </li>
                 <li class="border-b-2 border-b-[#F3B17E]">
-                    <div class="md:p-4 py-2 block bg-black" href="#"><i class="fa-solid fa-gear px-5"></i>SETTINGS</div>
+                    <a class="py-2 block text-black hover:text-[#F3B17E] hover:bg-black" href="./settings.html"><i
+                            class="fa-solid fa-gear px-5"></i>SETTINGS (click to see the form page)</a>
                 </li>
             </ul>
         </div>
         <nav class="px-6 py-2.5 text-[#F3B17E]">
             <div class="flex justify-between">
-                <div class="items-center">
-                    <img src="img.png" class="mr-3 h-20" />
-                </div>
-                <div class="block lg:hidden md:hidden scale-50">
-                    <button onclick="showMenu()" class="flex items-center px-3 py-2 rounded text-[#F3B17E]">
-                        <i class="fa-solid fa-bars text-[#F3B17E]" id="iconMenu"></i>
-                    </button>
-                </div>
+                <a href="./index.html"><img src="img.png" class="mr-3 h-20" /></a>
+                <button onclick="showMenu()" class="flex items-center px-3 py-2 rounded text-[#F3B17E] scale-50">
+                    <i class="fa-solid fa-bars text-[#F3B17E]" id="iconMenu"></i>
+                </button>
             </div>
         </nav>
-    </header>
+    </div>
     <div id="opacity">
-
+        <div class="mb-10 mt-14">
+            <div class="absolute -mt-2">
+                <div class="border-2 border-[#F3B17E] bg-black text-[#F3B17E] w-max text-xs ml-20">
+                    <span class="mx-3">LIVE</span>
+                </div>
+                <div class="absolute top-0 right-0 -mr-1 -mt-1 w-3 h-3 rounded-full bg-red-600 animate-ping">
+                </div>
+                <div class="absolute top-0 right-0 -mr-1 -mt-1 w-3 h-3 rounded-full bg-red-600"></div>
+            </div>
+            <div class="h-28 border-2 border-[#F3B17E] bg-black px-5 py-3 mx-12 rounded-3xl text-[#F3B17E]">
+                <div class="flow-root mt-6">
+                    <span class="text-xl float-left">Warriors</span>
+                    <div class="text-base absolute right-2/4 translate-x-1/2 flex flex-col">
+                        <div class="text-2xl flex-1">76 - 66</div>
+                        <div class="text-md opacity-75 flex-1">Q4 - 12:00</div>
+                    </div>
+                    <span class="text-xl float-right">Celtics</span>
+                </div>
+            </div>
+        </div>
+        <a href="./referee.html">
+            <div
+                class="h-12 py-2 mx-60 text-black bg-[#F3B17E] border-2 border-[#F3B17E] text-base rounded-2xl hover:text-[#F3B17E] hover:bg-black">
+                <span>Manage game</span>
+            </div>
+        </a>
+        <div class="mb-14 mt-14 mx-12 text-[#F3B17E] text-2xl">
+            <div class="flow-root px-10">
+                <span class="float-left">GSW</span>
+                <span class="float-right">BOS</span>
+            </div>
+            <div class="flow-root mt-4 text-lg">
+                <div class="float-left w-2/4 flow-root">
+                    <span class="float-left ml-16 text-base opacity-75">
+                        Q1
+                    </span>
+                    <span class="float-right mr-8">
+                        27
+                    </span>
+                </div>
+                <div class="float-right w-2/4 flow-root">
+                    <span class="float-left ml-8">
+                        22
+                    </span>
+                    <span class="float-right mr-16 text-base opacity-75">
+                        Q1
+                    </span>
+                </div>
+            </div>
+            <div class="flow-root mt-4 text-lg">
+                <div class="float-left w-2/4 flow-root">
+                    <span class="float-left ml-16 text-base opacity-75">
+                        Q2
+                    </span>
+                    <span class="float-right mr-8">
+                        27
+                    </span>
+                </div>
+                <div class="float-right w-2/4 flow-root">
+                    <span class="float-left ml-8">
+                        17
+                    </span>
+                    <span class="float-right mr-16 text-base opacity-75">
+                        Q2
+                    </span>
+                </div>
+            </div>
+            <div class="flow-root mt-4 text-lg">
+                <div class="float-left w-2/4 flow-root">
+                    <span class="float-left ml-16 text-base opacity-75">
+                        Q3
+                    </span>
+                    <span class="float-right mr-8">
+                        22
+                    </span>
+                </div>
+                <div class="float-right w-2/4 flow-root">
+                    <span class="float-left ml-8">
+                        27
+                    </span>
+                    <span class="float-right mr-16 text-base opacity-75">
+                        Q3
+                    </span>
+                </div>
+            </div>
+            <div class="flow-root mt-4 text-lg">
+                <div class="float-left w-2/4 flow-root">
+                    <span class="float-left ml-16 text-base opacity-75">
+                        Q4
+                    </span>
+                    <span class="float-right mr-8 text-base opacity-75">
+                        -
+                    </span>
+                </div>
+                <div class="float-right w-2/4 flow-root">
+                    <span class="float-left ml-8 text-base opacity-75">
+                        -
+                    </span>
+                    <span class="float-right mr-16 text-base opacity-75">
+                        Q4
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute -mt-3">
+            <div class="bg-black text-[#F3B17E] w-max text-base ml-20">
+                <span class="mx-1">Historic</span>
+            </div>
+        </div>
+        <div
+            class="historic custom-scrollbar border-2 border-[#F3B17E] px-5 py-3 mx-12 rounded-3xl text-[#F3B17E] flex flex-col overflow-auto">
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">5.1</span>
+                <div class="absolute right-2/4 translate-x-1/3 flex flex-col text-base">
+                    <span class="flex-1">(BOS) MADE Free Throw (2/2) Jaylen Brown</span>
+                </div>
+                <span class="float-right opacity-75 text-base">76 - 66</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">24.6</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 2PT Draymond Green</span>
+                <span class="float-right opacity-75 text-base">76 - 65</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">44.1</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE Free Throw (1/1) Al Horford</span>
+                <span class="float-right opacity-75 text-base">74 - 65</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">44.1</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 2PT Al Horford</span>
+                <span class="float-right opacity-75 text-base">74 - 64</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">2:10</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 2PT Jaylen Brown</span>
+                <span class="float-right opacity-75 text-base">74 - 62</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">2:38</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 3PT Jaylen Brown</span>
+                <span class="float-right opacity-75 text-base">74 - 60</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">3:41</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 2PT Andrew Wigins</span>
+                <span class="float-right opacity-75 text-base">74 - 57</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">3:41</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 2PT Jaylen Brown</span>
+                <span class="float-right opacity-75 text-base">72 - 57</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">4:54</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 3PT Marcus Smart</span>
+                <span class="float-right opacity-75 text-base">72 - 55</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">5:56</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 2PT Robert Williams III</span>
+                <span class="float-right opacity-75 text-base">72 - 52</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">6:15</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Stephen Curry</span>
+                <span class="float-right opacity-75 text-base">72 - 50</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">6:34</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Otto Porter Jr.</span>
+                <span class="float-right opacity-75 text-base">69 - 50</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">6:53</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 3PT Al Horford</span>
+                <span class="float-right opacity-75 text-base">66 - 50</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">7:14</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Stephen Curry</span>
+                <span class="float-right opacity-75 text-base">66 - 47</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">7:43</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Otto Porter Jr.</span>
+                <span class="float-right opacity-75 text-base">63 - 47</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">8:01</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 3PT Al Horford</span>
+                <span class="float-right opacity-75 text-base">60 - 47</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">9:16</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Stephen Curry</span>
+                <span class="float-right opacity-75 text-base">60 - 44</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">9:44</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 3PT Al Horford</span>
+                <span class="float-right opacity-75 text-base">57 - 44</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">11:17</span>
+                <span class="absolute left-1/4 text-base">(BOS) MADE 2PT Jaylen Brown</span>
+                <span class="float-right opacity-75 text-base">57 - 41</span>
+            </div>
+            <div class="flow-root ml-4 mb-10">
+                <span class="float-left opacity-75 text-base">11:34</span>
+                <span class="absolute left-1/4 text-base">(GSW) MADE 3PT Draymond Green</span>
+                <span class="float-right opacity-75 text-base">57 - 39</span>
+            </div>
+        </div>
     </div>
 </body>
 

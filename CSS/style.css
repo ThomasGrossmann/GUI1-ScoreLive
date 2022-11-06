@@ -1,14 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 body {
     font-family: Oswald;
 }
 
 #ham {
-    top: 100px;
     width: 86.6666666%;
 }
 
 #ham > ul > li:last-child {
     border-bottom: none;
+}
+
+.historic {
+    height: 560px;
 }
 
 /* Hide the Scrollbar on all navigators */
