@@ -2,29 +2,86 @@
 
 body {
     font-family: Oswald;
+    background-color: black;
+    animation: 0.5s ease-out FadeIn;
 }
 
 #ham {
-    width: 86.6666666%;
+    width: 90vw;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
 }
 
-#ham > ul > li:last-child {
+#ham>ul>li:last-child {
     border-bottom: none;
 }
 
-#historic {
-    height: 560px;
+.match-tile {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#historic > ul > li:last-child {
+.timeleft {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.refoptions {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#manageGame {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#qtScore {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#historic {
+    height: 40vh;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#historic>ul>li {
+    margin-bottom: 1.25rem;
+}
+
+#historic>ul>li:last-child {
     margin-bottom: 0;
+}
+
+#opacity>ul>li:last-child {
+    margin-bottom: 10px;
 }
 
 /* Hide the Scrollbar on all navigators */
 .custom-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .custom-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
