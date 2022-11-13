@@ -38,12 +38,12 @@ function whoScoredCeltics() {
 }
 
 function choosen() {
-    var lastBasket = document.getElementById("lastBasket")
+    //var lastBasket = document.getElementById("lastBasket")
     var chooseLast = document.getElementById("chooseLast")
 
     chooseLast.classList.remove("opacity-50")
-    lastBasket.classList.remove("bg-black")
+    /*lastBasket.classList.remove("bg-black")
     lastBasket.classList.remove("text-[#F3B17E]")
     lastBasket.classList.add("bg-[#F3B17E]")
-    lastBasket.classList.add("text-black")
+    lastBasket.classList.add("text-black")*/
 }
